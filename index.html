@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casio f-91w</title>
+  <link rel="icon" href="public/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload critical display fonts so they are ready before first paint -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://manzdev.github.io/twitch-casio/dseg7-bold.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://manzdev.github.io/twitch-casio/dseg14-bold.woff2" />
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Michroma&display=block" />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Michroma&display=block" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="casio-app">
+    <div class="container">
+      <div class="casio-f91w">
+
+        <!-- Top bracelet -->
+        <div class="top bracelet">
+          <div class="first band"></div>
+          <div class="second band"></div>
+        </div>
+
+        <!-- Core watch -->
+        <div class="core-watch-container">
+
+          <!-- Left buttons -->
+          <div class="buttons-container">
+            <div class="left top button-notch"></div>
+            <div class="button" id="light-btn"></div>
+            <div class="space"></div>
+            <div class="left bottom button-notch"></div>
+            <div class="button"></div>
+          </div>
+
+          <div class="core-watch">
+            <div class="crystal-screen">
+              <div class="color-border">
+                <div class="lcd-screen">
+
+                  <!-- Brand header -->
+                  <div class="top">
+                    <div class="brand text-white">CASIO</div>
+                    <div class="model text-yellow font-cursive">F-91W</div>
+                  </div>
+
+                  <!-- Display center -->
+                  <div class="center">
+                    <div class="inner-top">
+                      <div class="action text-white font-small">
+                        <span class="left arrow">◀</span> LIGHT
+                      </div>
+                      <div class="chronograph text-yellow font-small">
+                        ALARM CHRONOGRAPH
+                      </div>
+                    </div>
+
+                    <div class="inner-center" id="lcd">
+                      <div class="lcd-top">
+                        <span class="timemode" id="ampm"></span>
+                        <span class="weekday mini" id="weekday"></span>
+                        <span class="day mini" id="day"></span>
+                      </div>
+                      <div class="lcd-bottom">
+                        <span class="time">
+                          <span class="hours" id="hours"></span>
+                          <span class="sep">:</span>
+                          <span class="minutes" id="minutes"></span>
+                        </span>
+                        <span class="seconds mini" id="seconds"></span>
+                      </div>
+                    </div>
+
+                    <div class="inner-bottom">
+                      <div class="mode text-white font-small">
+                        <span class="left arrow">◀</span> MODE
+                      </div>
+                      <div class="alarm text-white font-small">
+                        ALARM ON-OFF/24HR <span class="right arrow">▶</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Water resist footer -->
+                  <div class="bottom">
+                    <div class="water text-white font-medium">WATER</div>
+                    <div class="wr-box text-red">
+                      <span>W<span class="r">R</span></span>
+                    </div>
+                    <div class="resist text-white font-medium">RESIST</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right buttons -->
+          <div class="buttons-container">
+            <div class="right top button-notch"></div>
+            <div class="space"></div>
+            <div class="right bottom button-notch"></div>
+            <div class="button"></div>
+          </div>
+
+        </div>
+
+        <!-- Bottom bracelet -->
+        <div class="bottom bracelet">
+          <div class="first band"></div>
+          <div class="second band"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

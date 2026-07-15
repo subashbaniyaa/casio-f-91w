@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found!</title>
+  <link rel="icon" href="public/favicon.png" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://manzdev.github.io/twitch-casio/dseg7-bold.woff2" />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Michroma&display=block" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lcd-404 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-family: "DSEG7 Classic", monospace;
+      font-size: 52px;
+      color: var(--lcd-color);
+      letter-spacing: 4px;
+      padding-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="casio-app">
+    <div class="container">
+      <div class="casio-f91w">
+
+        <div class="top bracelet">
+          <div class="first band"></div>
+          <div class="second band"></div>
+        </div>
+
+        <div class="core-watch-container">
+          <div class="buttons-container">
+            <div class="left top button-notch"></div>
+            <div class="button" id="light-btn"></div>
+            <div class="space"></div>
+            <div class="left bottom button-notch"></div>
+            <div class="button"></div>
+          </div>
+
+          <div class="core-watch">
+            <div class="crystal-screen">
+              <div class="color-border">
+                <div class="lcd-screen">
+
+                  <div class="top">
+                    <div class="brand text-white">CASIO</div>
+                    <div class="model text-yellow font-cursive">F-91W</div>
+                  </div>
+
+                  <div class="center">
+                    <div class="inner-top">
+                      <div class="action text-white font-small">
+                        <span class="left arrow">◀</span> LIGHT
+                      </div>
+                      <div class="chronograph text-yellow font-small">
+                        ALARM CHRONOGRAPH
+                      </div>
+                    </div>
+
+                    <div class="inner-center" id="lcd">
+                      <div class="lcd-404">404</div>
+                    </div>
+
+                    <div class="inner-bottom">
+                      <div class="mode text-white font-small">
+                        <span class="left arrow">◀</span> MODE
+                      </div>
+                      <div class="alarm text-white font-small">
+                        ALARM ON-OFF/24HR <span class="right arrow">▶</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bottom">
+                    <div class="water text-white font-medium">WATER</div>
+                    <div class="wr-box text-red">
+                      <span>W<span class="r">R</span></span>
+                    </div>
+                    <div class="resist text-white font-medium">RESIST</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons-container">
+            <div class="right top button-notch"></div>
+            <div class="space"></div>
+            <div class="right bottom button-notch"></div>
+            <div class="button"></div>
+          </div>
+        </div>
+
+        <div class="bottom bracelet">
+          <div class="first band"></div>
+          <div class="second band"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    const lcd = document.getElementById('lcd');
+    const btn = document.getElementById('light-btn');
+    function lightOn()  { lcd.classList.add('on');    document.body.classList.add('off'); }
+    function lightOff() { lcd.classList.remove('on'); document.body.classList.remove('off'); }
+    btn.addEventListener('mousedown',  lightOn);
+    btn.addEventListener('mouseup',    lightOff);
+    btn.addEventListener('mouseleave', lightOff);
+    btn.addEventListener('touchstart', lightOn,  { passive: true });
+    btn.addEventListener('touchend',   lightOff);
+  </script>
+</body>
+</html>
